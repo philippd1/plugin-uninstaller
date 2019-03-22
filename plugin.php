@@ -22,10 +22,10 @@ class pluginUninstaller extends Plugin{
         <th class="border-bottom-0" scope="col">Action</th>
         </tr></thead><tbody>';
         
-        $installedThemes = glob(PATH_PLUGINS . '/*' , GLOB_ONLYDIR);
-        foreach($installedThemes as $theme){
-            $theme = str_replace(PATH_PLUGINS.'/', '', $theme);
-            $html .= '<tr><td>'.$theme.'</td><td><button name="uninstall" class="btn btn-danger my-2" type="submit" value="'.$theme.'">Uninstall</button></td></tr>';
+        $installedPlugins = glob(PATH_PLUGINS . '/*' , GLOB_ONLYDIR);
+        foreach($installedPlugins as $installedPlugin){
+            $installedPlugin = str_replace(PATH_PLUGINS.'/', '', $installedPlugin);
+            $html .= '<tr><td>'.$installedPlugin.'</td><td><button name="uninstall" class="btn btn-danger my-2" type="submit" value="'.$installedPlugin.'">Uninstall</button></td></tr>';
         }
         
         $html .= '</tbody></table>';
